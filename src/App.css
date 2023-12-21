@@ -1,0 +1,21 @@
+#root {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.active {
+  color: #5fb4a2;
+}
+
+.menu {
+  position: absolute;
+  right: 1.5rem;
+  top: 4.5rem;
+  background: #33323d;
+  color: white;
+  width: 255px;
+  height: 220px;
+  padding: 1.8rem;
+}
