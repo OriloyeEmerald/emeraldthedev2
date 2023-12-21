@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Projects from '../projects';
 import { Link } from 'react-router-dom';
-import { FaCaretRight, FaCaretLeft } from 'react-icons/fa';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import Contact from '../components/contact';
 
 const ProjectDetail = () => {
     const {id} = useParams();
@@ -45,10 +45,10 @@ const ProjectDetail = () => {
   return (
     <section className='text-left p-[1.5rem]'>
        <div
-        className={`w-[350px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
+        className={`w-[330px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.image} alt="" className='w-[280px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[250px] h-[250px] mx-auto' />
       </div>
 
       <div className='sm:w-[300px]'>
@@ -106,11 +106,7 @@ const ProjectDetail = () => {
       <div className='border-[1px] border-b '></div>
 
 
-      <div className='sm:flex items-center  sm:justify-between p-[1.5rem] mt-[2rem] text-center'>
-        <h2 className='text-center sm:text-left'>Interested in doing a project together?</h2>
-        {/* <div className='border-[.5px] border-b'></div> */}
-        <button className='text-[.6rem] border-[1.3px] border-black py-[.4rem] px-[1.2rem] mt-[1rem] sm:mt-0 '>CONTACT ME</button>
-       </div>
+     <Contact />
     </section>
   );
 }
