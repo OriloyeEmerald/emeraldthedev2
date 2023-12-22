@@ -97,7 +97,7 @@ const ProjectDetail = () => {
       <div className='border-[1px] border-t mt-[2rem]'></div>
       <div className='flex items-center h-[140px]'>
         <div className='text-left flex-1'>
-          <IoIosArrowBack size={30} className='opacity-[.5]' onClick={() => handleNavigation('prev')}/>
+          <IoIosArrowBack size={30} className='opacity-[.5]' onClick={() => handleNavigation('prev', id)}/>
           
           <h1 className='text-[1.3rem]'>{previousProject.title}</h1>
           <p className='capitalize opacity-[.5] text-[.8rem]'>previous project</p>
@@ -106,7 +106,7 @@ const ProjectDetail = () => {
         <div className='border-[2px] border-r h-full '></div>
 
         <div className='text-right flex-1   py-[1rem]'>
-        <IoIosArrowForward size={30} className='ml-auto opacity-[.5]' onClick={() => handleNavigation('next')}/>
+        <IoIosArrowForward size={30} className='ml-auto opacity-[.5]' onClick={() => handleNavigation('next', id)}/>
           
           <h1 className='text-[1.3rem]'>{nextProject.title}</h1>
           <p className='capitalize opacity-[.5] text-[.8rem]'>next project</p>
