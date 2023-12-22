@@ -20,13 +20,14 @@ const ProjectDetail = () => {
 
     const project = Projects.find((project) => project.id === parseInt(id));
 
-    const findProjectById = (projectId) => Projects.find((p) => p.id === projectId);
+    const findProjectById = (projectId) => Projects.find((p) => p.id === parseInt(projectId));
 
     const getNextProject = () => findProjectById((project.id % Projects.length) + 1);
+    
     const getPreviousProject = () => findProjectById(((project.id - 2 + Projects.length) % Projects.length) + 1);
 
 
-    const handleNavigation = (direction) => {
+    const handleNavigation = (direction, id) => {
         const currentId = parseInt(id);
         const totalProjects = Projects.length;
     
@@ -51,7 +52,7 @@ const ProjectDetail = () => {
     }
 
   return (
-    <section className='text-left p-[1.5rem]'>
+    <section className='text-left px-[1.5rem] mt-[2rem]'>
        <div
         className={`w-[330px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
         style={{ backgroundColor: `${project.backg}` }}

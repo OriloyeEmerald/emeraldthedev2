@@ -14,12 +14,12 @@ const Project = ({ title, description, image, backg, id }) => {
 
   return (
     <div
-      className={`text-left p-[1.5rem] sm:flex gap-[2rem] items-center project-div ${
+      className={`text-left px-[1.5rem] sm:flex gap-[2rem] items-center project-div ${
         isEvenId ? 'sm:flex-row-reverse' : ''
       }`}
     >
       <div
-        className={`w-[330px] h-[270px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
+        className={`w-[330px] h-[270px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
         style={{ backgroundColor: `${backg}` }}
         >
         <img src={image} alt="" className='w-[250px] h-[250px] mx-auto' />
