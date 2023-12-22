@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Form = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000});
+     }, [])
+
   const handleInputChange = (e) => {
     // Your input change handling logic goes here
   };
@@ -8,7 +14,7 @@ const Form = () => {
   return (
     <div className='mt-[2rem]'>
       <h1 className='text-[2.2rem]'>Contact Me</h1>
-      <form action='' method='POST' className='mt-[1.5rem]'>
+      <form action='' method='POST' className='mt-[1.5rem]' data-aos = 'flip-left'>
         <div className='mb-[1rem]'>
           <label htmlFor='name' className='block text-left font-bold'>Name</label>
           <input 

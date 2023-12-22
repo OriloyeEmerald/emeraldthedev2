@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Project = ({ title, description, image, backg, id }) => {
+
+    useEffect(() => {
+        Aos.init({duration: 2000});
+     }, [])
+
   const isEvenId = id % 2 === 0;
 
   return (
@@ -13,10 +21,10 @@ const Project = ({ title, description, image, backg, id }) => {
       <div
         className={`w-[330px] h-[270px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
         style={{ backgroundColor: `${backg}` }}
-      >
+        >
         <img src={image} alt="" className='w-[250px] h-[250px] mx-auto' />
       </div>
-      <div className='sm:w-[300px]'>
+      <div className='sm:w-[300px]' data-aos = "fade-left">
         <div className='border-[1px] border-t mt-[2rem]'></div>
         <h1 className='mt-[1rem] text-[2.1rem] sm:text-[1.6rem]'>{title}</h1>
         <p className='mt-[1rem] leading-[1.6rem] font-[300] sm:text-[.8rem]'>

@@ -4,7 +4,10 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
+
 const Footer = () => {
+    
+
     const [activeLink, setActiveLink] = useState('home');
 
     const handleLinkClick = (link) => {

@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import Form from '../components/form';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactMe = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000});
+     }, [])
+
   return (
     <section className='text-left p-[1.5rem]'>
         <div className='border-[1px] border-t '></div>
         <h1 className='mt-[1rem] text-[2.2rem]'>Get in Touch</h1>
-        <p className='mt-[1rem]'>I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please do feel free to check out my online profiles below and get in touch using the form.</p>
+        <p className='mt-[1rem]' data-aos = "fade-left">I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please do feel free to check out my online profiles below and get in touch using the form.</p>
         
-        <div className='flex gap-[1rem] py-[2rem]'>
+        <div className='flex gap-[1rem] py-[2rem]' data-aos = "fade-left">
          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
         <FaGithub size={30} />
         </a>

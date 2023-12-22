@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Projects from '../projects';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Contact from '../components/contact';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ProjectDetail = () => {
+
+    useEffect(() => {
+        Aos.init({duration: 2000});
+     }, [])
+
     const {id} = useParams();
     
 
@@ -51,7 +59,7 @@ const ProjectDetail = () => {
         <img src={project.image} alt="" className='w-[250px] h-[250px] mx-auto' />
       </div>
 
-      <div className='sm:w-[300px]'>
+      <div className='sm:w-[300px]' data-aos = "fade-left">
         <div className='border-[1px] border-t mt-[2rem]'></div>
         <h1 className='mt-[1rem] text-[2rem] sm:text-[1.6rem]'>{project.title}</h1>
         <p className='mt-[1rem] leading-[1.6rem] font-[300] text-[.9rem] sm:text-[.8rem]'>
@@ -68,14 +76,14 @@ const ProjectDetail = () => {
 
       <h1 className='mt-[1rem] text-[1.6rem] font-[500]'>Project Background</h1>
 
-      <p className='mt-[1.5rem]'>{project.projBack}</p>
+      <p className='mt-[1.5rem]' data-aos = "fade-left">{project.projBack}</p>
 
       <h1 className='mt-[1rem] text-[1.6rem] font-[500]'>Static Previews</h1>
 
       <div
         className={`w-[350px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
         style={{ backgroundColor: `${project.backg}` }}
-      >
+         data-aos = "fade-down">
         <img src={project.image} alt="" className='w-[280px] h-[250px] mx-auto' />
       </div>
 
@@ -90,7 +98,7 @@ const ProjectDetail = () => {
         <div className='text-left flex-1'>
           <IoIosArrowBack size={30} className='opacity-[.5]' onClick={() => handleNavigation('prev')}/>
           
-          <h1 className='text-[1.3rem]'>{previousProject?.title}</h1>
+          <h1 className='text-[1.3rem]'>{previousProject.title}</h1>
           <p className='capitalize opacity-[.5] text-[.8rem]'>previous project</p>
         </div>
 
@@ -99,7 +107,7 @@ const ProjectDetail = () => {
         <div className='text-right flex-1   py-[1rem]'>
         <IoIosArrowForward size={30} className='ml-auto opacity-[.5]' onClick={() => handleNavigation('next')}/>
           
-          <h1 className='text-[1.3rem]'>{nextProject?.title}</h1>
+          <h1 className='text-[1.3rem]'>{nextProject.title}</h1>
           <p className='capitalize opacity-[.5] text-[.8rem]'>next project</p>
         </div>
       </div>
