@@ -8,6 +8,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 
+
 const ProjectDetail = () => {
 
     useEffect(() => {
@@ -92,7 +93,7 @@ const ProjectDetail = () => {
         className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[1.5rem]`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
+        <img src={project.staticImg} alt="" className='w-[240px] h-[250px] mx-auto' />
       </div>
       <div className='border-[1px] border-t mt-[2rem]'></div>
       <div className='flex items-center h-[140px]'>
