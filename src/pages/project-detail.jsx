@@ -23,7 +23,7 @@ const ProjectDetail = () => {
     const findProjectById = (projectId) => Projects.find((p) => p.id === parseInt(projectId));
 
     const getNextProject = () => findProjectById((project.id % Projects.length) + 1);
-    
+
     const getPreviousProject = () => findProjectById(((project.id - 2 + Projects.length) % Projects.length) + 1);
 
 
@@ -54,10 +54,10 @@ const ProjectDetail = () => {
   return (
     <section className='text-left px-[1.5rem] mt-[2rem]'>
        <div
-        className={`w-[330px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.image} alt="" className='w-[250px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
       </div>
 
       <div className='sm:w-[300px]' data-aos = "fade-left">
@@ -82,17 +82,17 @@ const ProjectDetail = () => {
       <h1 className='mt-[1rem] text-[1.6rem] font-[500]'>Static Previews</h1>
 
       <div
-        className={`w-[350px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
         style={{ backgroundColor: `${project.backg}` }}
          data-aos = "fade-down">
-        <img src={project.image} alt="" className='w-[280px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
       </div>
 
       <div
-        className={`w-[350px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[1.5rem]`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[1.5rem]`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.image} alt="" className='w-[280px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
       </div>
       <div className='border-[1px] border-t mt-[2rem]'></div>
       <div className='flex items-center h-[140px]'>

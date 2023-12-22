@@ -19,10 +19,10 @@ const Project = ({ title, description, image, backg, id }) => {
       }`}
     >
       <div
-        className={`w-[330px] h-[270px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
+        className={`w-[320px] h-[250px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
         style={{ backgroundColor: `${backg}` }}
         >
-        <img src={image} alt="" className='w-[250px] h-[250px] mx-auto' />
+        <img src={image} alt="" className='w-[240px] h-[250px] mx-auto' />
       </div>
       <div className='sm:w-[300px]' data-aos = "fade-left">
         <div className='border-[1px] border-t mt-[2rem]'></div>
