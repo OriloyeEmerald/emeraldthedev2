@@ -55,45 +55,54 @@ const ProjectDetail = () => {
   return (
     <section className='text-left px-[1.5rem] mt-[2rem]'>
        <div
-        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden sm:w-[650px] sm:h-[330px]`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto sm:w-[540px] sm:h-[380px]' />
       </div>
 
-      <div className='sm:w-[300px]' data-aos = "fade-left">
-        <div className='border-[1px] border-t mt-[2rem]'></div>
-        <h1 className='mt-[1rem] text-[2rem] sm:text-[1.6rem]'>{project.title}</h1>
-        <p className='mt-[1rem] leading-[1.6rem] font-[300] text-[.9rem] sm:text-[.8rem]'>
-          {project.description}
-        </p>
-        <p className='mt-[1.5rem] text-[#5fb4a2]'>{project.stack}</p>
-        <Link to={project.live}>
+      <div className='' data-aos = "fade-left">
+        <div className='border-[1px] border-t mt-[2rem] sm:w-full'></div>
+    <div className='sm:flex gap-[3rem]
+     '>
+        <div className='w-[400px]'>
+          <h1 className='mt-[1rem] text-[2rem] sm:text-[1.6rem]'>{project.title}</h1>
+           <p className='mt-[1rem] leading-[1.6rem] font-[300] text-[.9rem] sm:text-[.8rem]'>
+           {project.description}
+           </p>
+        </div>
+        <div className='w-400px'>
+          <p className='mt-[1.5rem] text-[#5fb4a2] sm:text-[.8rem]'>{project.points}</p>
+          <p className='mt-[1rem] text-[#5fb4a2] sm:text-[.8rem]'>{project.stack}</p>
+          <Link to={project.live}>
            <button className='text-[.7rem] mt-[2rem] border-[1.4px] py-[.5rem] px-[1.2rem] border-black uppercase'>
           visit website
            </button>
-        </Link>
+          </Link>
+        </div>
+      </div>
         <div className='border-[1px] border-b mt-[1.5rem]'></div>
       </div>
 
       <h1 className='mt-[1rem] text-[1.6rem] font-[500]'>Project Background</h1>
 
-      <p className='mt-[1.5rem]' data-aos = "fade-left">{project.projBack}</p>
+      <p className='mt-[1.5rem] sm:text-[.8rem]
+      ' data-aos = "fade-left">{project.projBack}</p>
 
       <h1 className='mt-[1rem] text-[1.6rem] font-[500]'>Static Previews</h1>
 
       <div
-        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem]`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[2rem] sm:w-[650px] sm:h-[330px]`}
         style={{ backgroundColor: `${project.backg}` }}
          data-aos = "fade-down">
-        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto' />
+        <img src={project.image} alt="" className='w-[240px] h-[250px] mx-auto sm:w-[540px] sm:h-[380px]' />
       </div>
 
       <div
-        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[1.5rem]`}
+        className={`w-[320px] h-[200px] mx-auto pt-[1.5rem] border-black overflow-hidden mt-[1.5rem] sm:w-[650px] sm:h-[330px]`}
         style={{ backgroundColor: `${project.backg}` }}
       >
-        <img src={project.staticImg} alt="" className='w-[240px] h-[250px] mx-auto' />
+        <img src={project.staticImg} alt="" className='w-[240px] h-[250px] mx-auto sm:w-[540px] sm:h-[380px]' />
       </div>
       <div className='border-[1px] border-t mt-[2rem]'></div>
       <div className='flex items-center h-[140px]'>
